@@ -1,0 +1,282 @@
+:root {
+  --background-color1: #0f70da;
+  --background-color2: #fff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+body {
+  background-image: linear-gradient(to bottom right, #0f70da, #007aff);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Poppins;
+  font-weight: 300;
+  color: #2d3748;
+}
+.container {
+  background-color: #fff;
+  box-shadow: -3px 20px 16px 11px rgba(21, 49, 232, 0.79);
+  height: 75%;
+  display: flex;
+  margin: 0 100px;
+}
+
+.signup-visual {
+  width: 40%;
+  height: 100%;
+  background-image: linear-gradient(to bottom right, #0f70da, #007aff);
+  text-align: center;
+  margin: 6px, 0;
+  position: relative;
+  align-content: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.media {
+  color: #fff;
+  line-height: 150%;
+  letter-spacing: -2%;
+  padding-bottom: 1.5rem;
+  font-size: 13px;
+}
+
+.img-group {
+  justify-content: center;
+  align-items: center;
+}
+
+.ellipse {
+  width: 60%;
+  position: absolute;
+  z-index: 1;
+  left: 20%;
+}
+
+.phones {
+  width: 50%;
+  position: relative;
+  z-index: 2;
+}
+
+.dots {
+  width: 15%;
+  padding-top: 1rem;
+}
+
+/*Css for form*/
+.logo {
+  height: 34px;
+  padding-bottom: 3px;
+}
+
+h4 {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+#paragraph {
+  font-size: 10px;
+}
+
+.signup-form {
+  width: 60%;
+  background-color: var(--background-color2);
+  align-items: center;
+}
+
+.signup-actions {
+  padding: 20px 60px;
+  width: 60%;
+}
+
+.signup-description {
+  padding-bottom: 12px;
+}
+
+.user-details {
+  width: 100%;
+}
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 10px;
+}
+
+input {
+  color: #2d3748;
+  font-style: poppins;
+  padding: 3px 5px;
+}
+
+.log-in,
+.btns {
+  font-size: 12px;
+}
+
+.input-box,
+.create-btn,
+.sign-in-btn {
+  width: 47%;
+}
+.btns {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.create-btn,
+.sign-in-btn {
+  border-radius: 5px;
+  padding: 10px;
+  border: none;
+  color: #fff;
+  font-size: 10px;
+}
+.create-btn {
+  background-color: #007aff;
+}
+
+.sign-in-btn {
+  background-color: #2d3748;
+  text-align: center;
+  text-decoration: none;
+}
+
+.log-in {
+  width: 100%;
+  text-align: center;
+}
+
+.google-logo {
+  height: 10px;
+  bottom: 10px;
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+
+input[type="date"]:required:invalid::-webkit-datetime-edit {
+  display: none;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"] {
+  padding: 5px 11px;
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid #d1d0d0db;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+label {
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+
+.fpword {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 5px;
+  margin-bottom: 4px;
+}
+
+.checkbox {
+  justify-content: center;
+  margin-top: 5px;
+  margin-bottom: 12px;
+}
+.log-in {
+  margin-top: 12px;
+}
+
+.google {
+  height: 17px;
+  margin-right: 5px;
+}
+
+.google-sign {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-size: 10px;
+}
+
+a {
+  color: #007aff;
+}
+
+input[type="password"]:focus,
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus {
+  outline: none !important;
+  border-color: #007aff;
+}
+#alert{
+  font-size: 10px;
+  display: inline-block;
+  color: #ffffff;
+  
+}
+
+@media (width <= 600px) {
+  .signup-visual {
+    display: none;
+  }
+  .signup-actions {
+    width: 100%;
+    font-size: 8px;
+    padding: 2px 0;
+  }
+  .btns {
+    display: flex;
+    justify-content: space-between;
+  }
+  .create-btn,
+  .sign-in-btn {
+    width: 100%;
+    padding: 1px;
+    font-size: 8px;
+  }
+  .create-btn {
+    margin-right: 9px;
+  }
+  .googlei {
+    height: 3px;
+  }
+  .signup-actions {
+    padding: 10px 30px;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="date"],
+  label {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-size: 10px;
+  }
+  .google-logo {
+    margin-top: 10px;
+  }
+  .checkbox {
+    margin-top: 3px;
+    margin-bottom: 6px;
+  }
+  .fpword {
+    display: flex;
+  }
+}
