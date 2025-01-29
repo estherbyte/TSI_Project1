@@ -3,23 +3,39 @@ const form = document.querySelector("form");
 const warn = document.getElementById("warn");
 let email = document.getElementById("email");
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  let passwordElement = document.getElementById("pword");
-  let password = passwordElement.value;
-  let conPasswordElement = document.getElementById("pword2");
-  let conPassword = conPasswordElement.value;
-  if (password === conPassword) {
-    passwordElement.style.borderColor = "white";
-    return console.log("password match correctly");
+//password validation
+let passwordElement = document.getElementById("pword");
+passwordElement.addEventListener("input", (event) => {
+  event.preventDefault();
+
+  passwordElement.style.borderColor = "red";
+  if (!passwordElement.value.match(/[A-Z]/g)) {
+    warn.textContent = "Password must contain one Upper case!";
+  } else if (!passwordElement.value.match(/[0-9]/g)) {
+    warn.textContent = "Password must contain one number!";
+  } else if (!(passwordElement.value.length >= 8)) {
+    warn.textContent = "Password must be less than 8 characters!";
   } else {
-    warn.textContent = "Password does not match!";
-    warn.style.color = "red";
-    conPasswordElement.style.borderColor = "red";
-    return console.log("passwords do not match!");
+    passwordElement.style.borderColor = "#d1d0d0db";
+    warn.textContent = "";
   }
 });
 
+//confirmPassword validation
+let conPasswordElement = document.getElementById("pword2");
+conPasswordElement.addEventListener("input", (event) => {
+  event.preventDefault();
+
+  if (passwordElement.value === conPasswordElement.value) {
+    conPasswordElement.style.borderColor = "#d1d0d0db";
+    warn.textContent = "";
+  } else {
+    warn.textContent = "Password does not match!";
+    conPasswordElement.style.borderColor = "red";
+  }
+});
+
+//emailPhone validation
 let emailPhone = document.getElementById("emailPhone");
 emailPhone.addEventListener("input", (event) => {
   event.preventDefault();
@@ -32,13 +48,11 @@ emailPhone.addEventListener("input", (event) => {
       )
     ) {
       warn.textContent = "Invalid email address";
-      warn.style.color = "red";
     } else {
       warn.textContent = "";
     }
   } else if (/[0-9]/.test(emailPhoneValue)) {
     // phone validation
-    warn.style.color = "red";
     if (emailPhoneValue.length < 11) {
       warn.textContent = "Phone number cannot be less than 11";
     } else if (emailPhoneValue.length > 11) {

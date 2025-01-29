@@ -20,6 +20,7 @@ body {
   font-weight: 300;
   color: #2d3748;
 }
+
 .container {
   background-color: #fff;
   box-shadow: -3px 20px 16px 11px rgba(21, 49, 232, 0.79);
@@ -28,12 +29,12 @@ body {
   margin: 0 100px;
 }
 
+/*Css for visualPage*/
 .signup-visual {
   width: 40%;
   height: 100%;
   background-image: linear-gradient(to bottom right, #0f70da, #007aff);
   text-align: center;
-  position: relative;
   align-content: center;
   padding-left: 10px;
   padding-right: 10px;
@@ -50,6 +51,9 @@ body {
 .img-group {
   justify-content: center;
   align-items: center;
+  position: relative;
+  padding: 30px 0;
+  width: 100%;
 }
 
 .ellipse {
@@ -93,7 +97,6 @@ h4 {
   background-color: var(--background-color2);
   align-items: center;
 }
-
 
 .signup-actions {
   padding: 20px 60px;
@@ -163,7 +166,7 @@ input {
 }
 
 .checkbox > div {
-display: flex;
+  display: flex;
 }
 
 .google-logo {
@@ -234,15 +237,16 @@ input[type="date"]:focus {
   outline: none !important;
   border-color: #007aff;
 }
-#warn{
+#warn {
   font-size: 10px;
   display: inline-block;
-  color: #ffffff;
-  
+  color: red;
 }
 
+/*End of Css for form*/
 
 
+/*Media Queries*/
 @media (width <= 600px) {
   .signup-visual {
     display: none;
@@ -292,10 +296,13 @@ input[type="date"]:focus {
     justify-content: flex-start;
   }
 
+  .img-group {
+    width: 60%;
+  }
 }
 
 @media (width > 600px) {
-  .signup-description{
+  .signup-description {
     padding-bottom: 0px;
   }
 
@@ -314,7 +321,7 @@ input[type="date"]:focus {
     margin-right: 9px;
   }
 
-  .log-in{
+  .log-in {
     font-size: 8px;
   }
 
@@ -328,7 +335,7 @@ input[type="date"]:focus {
     margin-bottom: 0px;
   }
 
-   input[type="text"],
+  input[type="text"],
   input[type="email"],
   input[type="password"],
   input[type="date"],
@@ -352,14 +359,14 @@ input[type="date"]:focus {
 }
 
 @media (width <= 550px) {
-  .container{
+  .container {
     height: 80%;
     margin: 10px 15px;
   }
   .signup-page {
     margin: 10px;
   }
-  .signup-description { 
+  .signup-description {
     padding-bottom: 9px;
   }
 
@@ -367,13 +374,4 @@ input[type="date"]:focus {
     width: 50%;
   }
 }
-
-@media (width <= 900px) {
-  .media {
-    margin-top: -150px;
-  }
-  
-  .img-group {
-    padding: 20px 0 40px 0;
-  }
-}
+/*End of Media Queries*/

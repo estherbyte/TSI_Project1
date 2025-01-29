@@ -12,7 +12,7 @@
 </head>
 
 <body>
-
+    <!--signup-visual-->
     <div class="container">
         <div class="signup-visual">
             <div class="media">
@@ -25,7 +25,10 @@
             <div>
                 <img src="./img/slider dots.png" class="dots">
             </div>
-        </div><!--end of signup-visual-->
+        </div>
+        <!--end of signup-visual-->
+
+        <!--form section-->
         <div class="signup-actions">
             <div class="signup-page">
                 <img src="./img/logo.png" class="logo">
@@ -39,19 +42,19 @@
                     <form>
                         <div class="input-box">
                             <label for="fname">First name</label>
-                            <input type="text" id="fname" name="fname" class="bio">
+                            <input type="text" id="fname" name="fname" class="bio" required>
                         </div>
                         <div class="input-box">
                             <label for="lname">Last name</label>
-                            <input type="text" id="lname" name="lname" class="bio">
+                            <input type="text" id="lname" name="lname" class="bio" required>
                         </div>
                         <div class="input-box">
                             <label for="email/phone">Email or phone number</label>
-                            <input type="text" id="emailPhone" name="emailPhone" class="bio">
+                            <input type="text" id="emailPhone" name="emailPhone" class="bio" required>
                         </div>
                         <div class="input-box">
                             <label for="dob">Date of birth (MM/DD/YY) </label>
-                            <input type="date" id="dob" name="dob" class="bio">
+                            <input type="date" id="dob" name="dob" class="bio" required>
                         </div>
                         <div class="input-box">
                             <label for="pword">Password</label>
@@ -67,7 +70,7 @@
                                 <label for="checkbox" class="input-box">Remember me</label>
                             </div>
                             <div>
-                                <input type="checkbox">
+                                <input type="checkbox" required>
                                 <label for="checkbox">I agree to all the <a href="#">Terms</a> and <a href="#">Privacy
                                         policy</a></label>
                             </div>
@@ -82,6 +85,9 @@
                         </div>
                     </form>
                 </div>
+                    <!--form section ends-->
+
+                    <!--login and download-->
                 <div class="input-box log-in">
                     <p>Don't have an account? <a href="#">Log in</a></p>
                 </div>
