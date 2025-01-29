@@ -23,10 +23,4 @@ form.addEventListener("submit", (e) => {
  
 });
 
-let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-if (!emailPattern.test(email)) {
-  alert("Please enter a valid email address.");
-
-  return false;
-}

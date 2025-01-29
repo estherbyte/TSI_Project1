@@ -232,6 +232,8 @@ input[type="date"]:focus {
   
 }
 
+
+
 @media (width <= 600px) {
   .signup-visual {
     display: none;
